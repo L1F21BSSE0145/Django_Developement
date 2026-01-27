@@ -1,0 +1,31 @@
+{%extends 'main.html'%}
+{%block content%}
+{%load static %}
+<section class="content">
+    <h2>Contact Us</h2>
+    <p>
+        Have questions or need travel guidance?  
+        Feel free to contact us anytime.
+    </p>
+    {% if messages %}
+    {% for message in messages %}
+        <p style="color: green;">{{ message }}</p>
+    {% endfor %}
+    {% endif %}
+
+    <form class="contact-form" method="post" >
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p class="contact-info">
+        📍 Pakistan<br>
+        📧 info@tourguidpakistan.com<br>
+        ☎ +92-300-0000000
+    </p>
+</section>
+{%endblock content%}
+
