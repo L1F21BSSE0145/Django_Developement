@@ -1,0 +1,53 @@
+{%extends 'main.html'%}
+{%block content%}
+{%load static %}
+<section class="hero">
+    <h2>Explore the Beauty of Pakistan</h2>
+    <p>Your trusted guide for Lahore, Jhelum & Northern Areas</p>
+</section>
+
+<section class="tours">
+    <div class="tour-card">
+        <img src="{% static 'images/lahore.jpg' %}" alt="Lahore">
+        <h3>Lahore Tour</h3>
+        <p>
+            Visit Badshahi Mosque, Lahore Fort, Minar-e-Pakistan and enjoy
+            traditional Punjabi food. Best time to visit is winter season.
+        </p>
+        <ul>
+            <li>Historical places</li>
+            <li>Local food guidance</li>
+            <li>Safe travel tips</li>
+            <li>Accommodation options</li>
+        </ul>
+    </div>
+
+    <div class="tour-card">
+        <img src="{% static 'images/jhelum.jpg' %}" alt="Jhelum">
+        <h3>Jhelum Tour</h3>
+        <p>
+            Explore Jhelum River, Mangla Dam and Rohtas fort scenic landscapes.
+            Ideal for nature lovers and peaceful trips.
+        </p>
+        <ul>
+            <li>River sightseeing</li>
+            <li>Photography spots</li>
+            <li>Local culture</li>
+        </ul>
+    </div>
+
+    <div class="tour-card">
+        <img src="{% static 'images/skardu.jpg' %}" alt="Northern Areas">
+        <h3>Northern Areas Tour</h3>
+        <p>
+            Discover Hunza, Skardu, Naran & Kaghan.
+            Experience mountains, lakes and natural beauty.
+        </p>
+        <ul>
+            <li>Mountain safety guidelines</li>
+            <li>Best travel seasons</li>
+            <li>Hotel & transport advice</li>
+        </ul>
+    </div>
+</section>
+{%endblock content%}
