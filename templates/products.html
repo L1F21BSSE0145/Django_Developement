@@ -1,0 +1,54 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+<section class="products">
+
+    <div class="card">
+        <img src="{% static 'images/smart.jpg' %}" alt="Smart Phone"/>
+        <h3>Smart Phone</h3>
+        <p>Rs. 45,000</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/headphones.jpg' %}" alt="Smart Phone"/>
+        <h3>Headphones</h3>
+        <p>Rs. 3,500</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/laptop.jpg' %}" alt="Smart Phone"/>
+        <h3>Laptop</h3>
+        <p>Rs. 120,000</p>
+        <button>Add to Cart</button>
+    </div>
+
+</section>
+
+<section class="products">
+
+    <div class="card">
+        <img src="{% static 'images/andriod.jpg' %}" alt="Smart Phone"/>
+        <h3>andriod phone</h3>
+        <p>Rs. 45,000</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/airbuds.jpg' %}" alt="Smart Phone"/>
+        <h3>airbuts</h3>
+        <p>Rs. 3,500</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/qled.jpg' %}" alt="Smart Phone"/>
+        <h3>QLed</h3>
+        <p>Rs. 60,000</p>
+        <button>Add to Cart</button>
+    </div>
+
+</section>
+{% endblock content %}
+

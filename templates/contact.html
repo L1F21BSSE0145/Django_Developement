@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+
+<h4 style="text-align: center; padding: 20px;">Contact Us</h4>
+
+{% if messages %}
+    {% for message in messages %}
+        <p style="color: green; text-align:center;">
+            {{ message }}
+        </p>
+    {% endfor %}
+{% endif %}
+
+<form class="form" method="post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+{% endblock content %}
+
+
