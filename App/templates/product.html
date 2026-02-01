@@ -1,0 +1,60 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+<main>
+<section class="products">
+    <div class="container">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+
+            <div class="product">
+                <img src="{% static 'images/shoes.jpg' %}" alt="">
+                <h3>Product One</h3>
+                <p>High quality product</p>
+                <span>Rs 2,500</span>
+            </div>
+
+            <div class="product">
+                <img src="{% static 'images/Wash.jpg' %}" alt="">
+                <h3>Product Two</h3>
+                <p>Best seller item</p>
+                <span>Rs 3,200</span>
+            </div>
+
+            <div class="product">
+                <img src="{% static 'images/clothes.jpg' %}" alt="">
+                <h3>Product Three</h3>
+                <p>Customer favorite</p>
+                <span>Rs 1,800</span>
+            </div>
+
+        </div>
+       <br/>
+         <div class="product-grid">
+
+            <div class="product">
+                <img src="{% static 'images/shoes.jpg' %}" alt="">
+                <h3>Product One</h3>
+                <p>High quality product</p>
+                <span>Rs 2,500</span>
+            </div>
+
+            <div class="product">
+                <img src="{% static 'images/Wash.jpg' %}" alt="">
+                <h3>Product Two</h3>
+                <p>Best seller item</p>
+                <span>Rs 3,200</span>
+            </div>
+
+            <div class="product">
+                <img src="{% static 'images/clothes.jpg' %}" alt="">
+                <h3>Product Three</h3>
+                <p>Customer favorite</p>
+                <span>Rs 1,800</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+</main>
+{% endblock content %}

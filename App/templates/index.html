@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+<main>
+<section class="hero">
+    <div class="container">
+        <h1>Best Online Shopping Experience</h1>
+        <p>Quality products at affordable prices</p>
+        <button onclick="location.href='{% url 'product' %}'">Shop Now</button>
+    </div>
+</section>
+</main>
+{% endblock content %}
