@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+<section class="cart-page">
+    <h2>Your Shopping Cart</h2>
+
+    {% if products and products|length > 0 %}
+    <div class="cart-container">
+
+        {% for product in products %}
+        <div class="cart-item">
+
+              {% if product.image %}
+              <img src="{% static 'images/'|add:product.image %}" alt="{{ product.name }}">
+              {% else %}
+              <img src="{% static 'images/no-image.png' %}">
+              {% endif %}
+
+            <div class="cart-item-details">
+                <h3>{{ product.name }}</h3>
+                <p>Price: Rs. {{ product.price }}</p>
+                <p>Quantity: {{ product.qty }}</p>
+                <p>Subtotal: Rs. {{ product.subtotal }}</p>
+            </div>
+
+        </div>
+        {% endfor %}
+
+        <div class="cart-total">
+            <h3>Total: Rs. {{ total }}</h3>
+        </div>
+
+        {% comment %} <div class="checkout-btn">
+            <button>Proceed to Checkout</button>
+        </div> {% endcomment %}
+
+    </div>
+    {% else %}
+        <p class="empty-cart">Your cart is empty 😔</p>
+    {% endif %}
+</section>
+{% endblock %}

@@ -1,54 +1,27 @@
 {% extends "main.html" %}
 {% block content %}
 {% load static %}
-<section class="products">
-
-    <div class="card">
-        <img src="{% static 'images/smart.jpg' %}" alt="Smart Phone"/>
-        <h3>Smart Phone</h3>
-        <p>Rs. 45,000</p>
-        <button>Add to Cart</button>
-    </div>
-
-    <div class="card">
-        <img src="{% static 'images/headphones.jpg' %}" alt="Smart Phone"/>
-        <h3>Headphones</h3>
-        <p>Rs. 3,500</p>
-        <button>Add to Cart</button>
-    </div>
-
-    <div class="card">
-        <img src="{% static 'images/laptop.jpg' %}" alt="Smart Phone"/>
-        <h3>Laptop</h3>
-        <p>Rs. 120,000</p>
-        <button>Add to Cart</button>
-    </div>
-
-</section>
 
 <section class="products">
 
+    {% for product in products %}
     <div class="card">
-        <img src="{% static 'images/andriod.jpg' %}" alt="Smart Phone"/>
-        <h3>andriod phone</h3>
-        <p>Rs. 45,000</p>
-        <button>Add to Cart</button>
-    </div>
+        {% if product.image %}
+            <img src="{% static 'images/'|add:product.image %}" alt="{{ product.name }}">
+        {% else %}
+            <img src="{% static 'images/no-image.png' %}">
+        {% endif %}
 
-    <div class="card">
-        <img src="{% static 'images/airbuds.jpg' %}" alt="Smart Phone"/>
-        <h3>airbuts</h3>
-        <p>Rs. 3,500</p>
-        <button>Add to Cart</button>
-    </div>
+        <h3>{{ product.name }}</h3>
+        <p>Rs. {{ product.price }}</p>
 
-    <div class="card">
-        <img src="{% static 'images/qled.jpg' %}" alt="Smart Phone"/>
-        <h3>QLed</h3>
-        <p>Rs. 60,000</p>
-        <button>Add to Cart</button>
+        <a href="{% url 'add_to_cart' product.id %}" class="add-cart-btn">
+            Add to Cart
+        </a>
     </div>
+    {% endfor %}
 
 </section>
-{% endblock content %}
+
+{% endblock %}
 
