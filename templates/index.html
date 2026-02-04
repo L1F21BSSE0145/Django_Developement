@@ -1,10 +1,19 @@
-{%extends "main.html" %}
-{% block content %}
+{% extends "main.html" %}
 {% load static %}
+{% block content %}
 <section class="hero">
-    <h2>Pakistan’s #1 Online Shopping Store</h2>
-    <p>Electronics, Fashion, Groceries & More</p>
-    <a href="{% url 'products' %}" class="btn">Shop Now</a>
+    <div class="hero-content">
+        <h2>Pakistan’s #1 Online Shopping Store</h2>
+        <p>Electronics, Fashion, Groceries & More</p>
+        <a href="{% url 'products' %}" class="btn">Shop Now</a>
+    </div>
+
+    <div class="hero-images">
+        <img src="{% static 'images/electronic.jpg' %}" alt="Electronics">
+        <img src="{% static 'images/fashion.jpg' %}" alt="Fashion">
+        <img src="{% static 'images/grocery.jpg' %}" alt="Groceries">
+    </div>
 </section>
 {% endblock content %}
+
 
