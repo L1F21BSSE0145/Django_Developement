@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+<section class="checkout-page">
+    <h2>Checkout</h2>
+
+    <div class="checkout-box">
+        <h3>Order Summary</h3>
+
+        {% for product in products %}
+        <div class="checkout-item">
+            <span>{{ product.name }} (x{{ product.qty }})</span>
+            <span>Rs. {{ product.subtotal }}</span>
+        </div>
+        {% endfor %}
+
+        <hr>
+
+        <h3>Total: Rs. {{ total }}</h3>
+
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Address" required>
+            <input type="text" placeholder="Phone Number" required>
+
+            <button type="submit" class="btn">Place Order</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

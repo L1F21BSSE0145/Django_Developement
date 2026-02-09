@@ -65,7 +65,7 @@ nav a:hover {
 }
 
 .hero-content {
-    color: #fff;
+    color: #141414;
     margin-bottom: 40px;
 }
 
@@ -97,17 +97,18 @@ nav a:hover {
 .hero-images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 900px;
+    gap: 2px;
+    max-width: 610px;
     margin: auto;
 }
 
 .hero-images img {
-    width: 100%;
-    height: 180px;
+    width: 200px;
+    height: 160px;
+    padding: 2px;
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    box-shadow: 2 6px 15px rgba(158, 43, 43, 0.25);
     transition: transform 0.3s ease;
 }
 
@@ -217,7 +218,7 @@ footer p {
 
 /* Inputs */
 .auth-container input {
-    width: 100%;
+    width: 90%;
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -353,6 +354,70 @@ footer p {
     font-size: 18px;
     color: #999;
     margin-top: 50px;
+}
+.checkout-page {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.checkout-box h3 {
+    margin-bottom: 15px;
+}
+
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.checkout-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+.checkout-box button {
+    background-color: #ff6801;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* DETAILS */
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-details h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cart-item-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* REMOVE BUTTON */
+.remove-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: #ff4d4d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.remove-btn:hover {
+    background: #cc0000;
 }
 
 
